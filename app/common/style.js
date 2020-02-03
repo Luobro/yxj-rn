@@ -1,12 +1,15 @@
-const COLOR_PRIMARY = '#046CC4';
-const COLOR_DARK = '#51514F';
-const COLOR_BRIGHT = '#FFE066';
-const COLOR_IMPORTANT = '#F25E5C';
-const COLOR_SOFT = '70C1B2';
+import { StyleSheet } from 'react-native';
+import { STYLE } from './constants';
+export default StyleSheet.create({
+  shadowNormal: {
+    shadowColor: STYLE.COLOR_BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: STYLE.OPACITY_WEAK,
+    shadowRadius: 12,
+  },
+});
 
-const OPACITY_HEAD = 0.85;
-const OPACITY_BODY = 0.65;
-const OPACITY_CAPTION = 0.45;
-const OPACITY_DISABLE = 0.25;
-const OPACITY_WEAK = 0.15;
-const OPACITY_FAINT = 0.05;
+export { STYLE as BASE_STYLE };
