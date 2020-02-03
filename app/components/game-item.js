@@ -55,7 +55,9 @@ class GameItem extends Component {
       },
     } = this.props.item;
     return (
-      <TouchableHighlight>
+      <TouchableHighlight
+        onPress = {() => {this.props.navigation.navigate('GameDetail', {goodsId, title})}}
+      >
         <View style = {styles.container}>
           <View style = {styles.leftContainer}>
             <Image

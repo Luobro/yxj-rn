@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import PromotionList from './views/promotion-list';
+import PromotionList from './screens/promotion-list';
+import GameDetail from './screens/game-detail';
 
 
 class SettingsScreen extends Component {
@@ -20,4 +22,11 @@ const TabNavigator = createBottomTabNavigator({
   Settings: SettingsScreen,
 });
 
-export default createAppContainer(TabNavigator);
+const StackNavigator = createStackNavigator({
+  Main: TabNavigator,
+  GameDetail: GameDetail,
+}, {
+  headerMode: 'float',
+})
+
+export default createAppContainer(StackNavigator);
