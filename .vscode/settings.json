@@ -1,0 +1,5 @@
+{
+  "problems.showCurrentInStatus": true,
+  "javascript.format.enable": false,
+  "javascript.implicitProjectConfig.checkJs": true
+}
